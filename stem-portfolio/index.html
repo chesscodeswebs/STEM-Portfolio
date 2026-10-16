@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEM Senior Portfolio</title>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Hero Banner / Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <h1 class="site-title">High School STEM Senior Portfolio</h1>
+      <p class="site-subtitle">Academic Capstone, Field Studies &amp; Technical Growth</p>
+    </div>
+  </header>
+
+  <!-- Sticky Navigation Bar (Buttons are dynamically injected by main.js) -->
+  <nav id="nav" class="site-nav" aria-label="Portfolio Sections"></nav>
+
+  <!-- Dynamic Main Content (Active section HTML is injected here by main.js) -->
+  <main id="content" class="content-container" role="main"></main>
+
+  <!-- Footer with copyright and program information -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-text">&copy; 2026 STEM Senior Portfolio &bull; High School STEM Academy</p>
+      <p class="footer-meta">Prepared for Community Partners, Board of Education, Faculty, and Family</p>
+    </div>
+  </footer>
+
+  <!-- Scripts loaded at the bottom in the exact required order -->
+  <!-- 1. data.js: Holds all personal text and reflection answers -->
+  <script src="js/data.js"></script>
+
+  <!-- 2. sections.js: Configures the 9 required portfolio sections -->
+  <script src="js/sections.js"></script>
+
+  <!-- 3. main.js: Sets up navigation, hash routing, and tab switching -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+

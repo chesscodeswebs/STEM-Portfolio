@@ -1,0 +1,44 @@
+{
+  // ── Editor Smoothness & Feel ────────────────────────────
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.cursorBlinking": true,
+
+  // ── Quality of Life & Formatting ────────────────────────
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // ── Typography & Readability ────────────────────────────
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.5,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, monospace",
+  "editor.fontLigatures": true,
+  "editor.renderWhitespace": "boundary",
+  "terminal.integrated.fontSize": 13,
+
+  // ── Files & Languages ───────────────────────────────────
+  "files.associations": {
+    "*.html": "html",
+    "*.css": "css",
+    "*.js": "javascript"
+  },
+  "files.exclude": {
+    "**/.DS_Store": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "html.format.indentInnerHtml": true,
+  "css.lint.unknownAtRules": "ignore"
+}

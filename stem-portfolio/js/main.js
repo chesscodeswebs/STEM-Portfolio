@@ -1,27 +1,9 @@
-/**
- * MAIN CONTROLLER
- * -----------------------------------------------------------------------------
- * Handles:
- *  1. Dynamic generation of navigation buttons from the sections array.
- *  2. Reading the URL hash (e.g., #introduction, #volunteering) to show the right tab.
- *  3. Updating the active button highlight.
- *  4. Listening to browser navigation events (Back/Forward buttons).
- * -----------------------------------------------------------------------------
- */
-
-// Grab the containers from index.html
 const navContainer = document.getElementById("nav");
 const contentContainer = document.getElementById("content");
 
-/**
- * Step 1: Build Navigation Buttons
- * Loops through the "sections" array (from sections.js) and creates a button for each.
- */
 function buildNavigation() {
-  // Clear any existing content in the nav
   navContainer.innerHTML = "";
 
-  // Create an unordered list to hold nav links cleanly
   const navList = document.createElement("ul");
   navList.className = "nav-list";
 
@@ -29,14 +11,12 @@ function buildNavigation() {
     const navItem = document.createElement("li");
     navItem.className = "nav-item";
 
-    // Create an anchor link that points to the section's URL hash
     const link = document.createElement("a");
     link.href = "#" + section.id;
     link.className = "nav-button";
     link.textContent = section.title;
     link.setAttribute("data-section-id", section.id);
 
-    // Clicking the link updates the hash in the browser URL
     navItem.appendChild(link);
     navList.appendChild(navItem);
   });
@@ -94,8 +74,8 @@ function highlightNavButton(activeId) {
 
 /**
  * Step 4: Event Listeners
- * 
- * - 'hashchange': Fires whenever the URL hash changes (like when clicking a nav button, 
+ *
+ * - 'hashchange': Fires whenever the URL hash changes (like when clicking a nav button,
  *   clicking a link in the Table of Contents, or using the browser's Back/Forward buttons).
  * - Initial call: Builds the nav and loads the initial section as soon as the scripts run.
  */

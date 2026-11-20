@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anuj Yadav - STEM Senior Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,22 +14,25 @@
   <!-- Site Header -->
   <header class="site-header">
     <div class="header-content">
-      <h1 class="site-title">Anuj Yadav</h1>
-      <p class="site-subtitle">STEM Senior Portfolio &bull; Northwest Cabarrus High School &bull; Class of 2030</p>
+      <h1 class="site-title"><span class="site-title__first">Anuj</span> <span class="site-title__last">Yadav</span></h1>
+      <p class="site-subtitle">STEM Senior Portfolio &bull; Class of 2030</p>
     </div>
   </header>
 
   <!-- Navigation Tabs -->
   <nav class="tabs-nav" aria-label="Portfolio Sections">
     <div class="tabs-container" role="tablist">
-      <button class="tab-btn active" role="tab" aria-selected="true" data-tab="intro">Introduction</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-tab="field-experiences">Field Experiences/Enrichment Trips</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-tab="personal-growth">Personal Growth Opportunities/Extracurricular STEM Activities</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-tab="volunteering">Volunteering in STEM Contexts</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-tab="projects">Outstanding Projects</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-tab="job-shadowing">Job Shadowing/Internship</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-tab="employability-skills">Employability Skills Evidence</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-tab="resume">Resume</button>
+      <button id="intro-tab" class="tab-btn active" role="tab" aria-controls="intro" aria-label="Introduction" aria-selected="true" data-tab="intro">Introduction</button>
+      <button id="field-experiences-tab" class="tab-btn" role="tab" aria-controls="field-experiences" aria-label="Field Experiences and Enrichment Trips" aria-selected="false" data-tab="field-experiences">Field Trips</button>
+      <button id="personal-growth-tab" class="tab-btn" role="tab" aria-controls="personal-growth" aria-label="Personal Growth and Extracurricular STEM Activities" aria-selected="false" data-tab="personal-growth">STEM Growth</button>
+      <button id="volunteering-tab" class="tab-btn" role="tab" aria-controls="volunteering" aria-label="Volunteering in STEM Contexts" aria-selected="false" data-tab="volunteering">STEM Service</button>
+      <button id="projects-tab" class="tab-btn" role="tab" aria-controls="projects" aria-label="Outstanding Projects" aria-selected="false" data-tab="projects">Projects</button>
+      <button id="job-shadowing-tab" class="tab-btn" role="tab" aria-controls="job-shadowing" aria-label="Job Shadowing and Internship" aria-selected="false" data-tab="job-shadowing">Work Experience</button>
+      <button id="employability-skills-tab" class="tab-btn" role="tab" aria-controls="employability-skills" aria-label="Employability Skills Evidence" aria-selected="false" data-tab="employability-skills">Skills Evidence</button>
+      <button id="resume-tab" class="tab-btn" role="tab" aria-controls="resume" aria-label="Resume" aria-selected="false" data-tab="resume">Resume</button>
+      <div class="tab-active-shadow" aria-hidden="true"></div>
+      <div class="tab-active-fill" aria-hidden="true"></div>
+      <div class="tab-indicator" aria-hidden="true"></div>
     </div>
   </nav>
 
@@ -35,33 +41,43 @@
 
     <!-- 1. Introduction Section -->
     <section id="intro" class="tab-section active" role="tabpanel" aria-labelledby="intro-tab">
-      <div class="profile-header">
-        <div class="photo-placeholder" role="img" aria-label="Portrait photo placeholder for Anuj Yadav, STEM student at Northwest Cabarrus High School">
-          <span>Image will be added later</span>
+      <div class="profile-layout">
+        <div class="profile-header">
+          <div class="profile-meta">
+            <h2>Anuj Yadav</h2>
+            <p><strong>School:</strong> Northwest Cabarrus High School</p>
+            <p><strong>Graduation Year:</strong> 2030</p>
+          </div>
         </div>
-        <div class="profile-meta">
-          <h2>Anuj Yadav</h2>
-          <p><strong>School:</strong> Northwest Cabarrus High School</p>
-          <p><strong>Graduation Year:</strong> 2030</p>
+        <article class="bio-block">
+          <div class="bio-copy">
+            <h3>My Bio</h3>
+            <p>I’m Anuj Yadav, a member of the STEM program at Northwest Cabarrus High School, and I expect to graduate in 2030. My interest in STEM began when I was young and curious about experiments and solving math problems. Being triple accelerated in math has pushed me to take on harder challenges and shown me how much STEM has to offer. I’m especially interested in coding and have made many games on Roblox. I hope to build a career in IT and create technology people find useful. This portfolio shares the projects, experiences, and skills shaping my STEM journey.</p>
+          </div>
+        </article>
+        <div class="photo-container" role="img" aria-label="Anuj Yadav monogram">
+          <span class="photo-monogram" aria-hidden="true">AY</span>
+          <span class="photo-caption" aria-hidden="true">STEM / PORTFOLIO</span>
         </div>
       </div>
 
-      <!-- Quick Bio -->
-      <article class="bio-block">
-        <h3>Quick Bio</h3>
-        <p>My name is Anuj Yadav, and I'm a graduating in 2030 in the STEM program at Northwest Cabarrus High School. My interest in STEM started when I was a little kid becoming interested in experiments and solving math equations. Since then, being triple accelerated in math has pushed me to take on harder challenges and shown me how much STEM has to offer. I'm especially interested in coding, and I've made many games especially on Roblox. I hope to build a successful career in IT and create technology that people actually use. In this portfolio, I'll share the projects, experiences, and skills that have shaped my STEM journey.</p>
-      </article>
-
       <!-- Reflection Questions -->
       <article class="reflection-block">
-        <h3>Why I joined the STEM program</h3>
-        <p></p>
+        <div class="reflection-card">
+          <h3 data-marker="A / MOTIVE">Why I joined the STEM program</h3>
+          <p>My early curiosity about experiments and math led me to the STEM program. It gives me room to keep exploring those interests and take on harder challenges.</p>
+        </div>
 
-        <h3>Key takeaways from my experience</h3>
-        <p></p>
+        <div class="reflection-card">
+          <h3 data-marker="B / DISCOVERY">Key takeaways from my experience</h3>
+          <p>Being triple accelerated in math has pushed me to work through more challenging problems. Making games on Roblox has shown me how coding can turn an idea into something people can use and enjoy.</p>
+        </div>
 
-        <h3>How my thinking or goals have changed since freshman year</h3>
-        <p></p>
+        <div class="reflection-card">
+          <h3 data-marker="C / DIRECTION">How my thinking or goals have changed since freshman year</h3>
+          <p>My interests have become more focused on coding and IT. I want to create useful technology, and I’m using my STEM experiences to explore how I can do that.</p>
+        </div>
+        <p class="reflection-note">[will add more]</p>
       </article>
 
       <!-- Table of Contents -->
@@ -81,46 +97,45 @@
     </section>
 
     <!-- 2. Field Experiences/Enrichment Trips -->
-    <section id="field-experiences" class="tab-section" role="tabpanel" hidden>
+    <section id="field-experiences" class="tab-section" role="tabpanel" aria-labelledby="field-experiences-tab" hidden>
       <h2>Field Experiences/Enrichment Trips</h2>
     </section>
 
     <!-- 3. Personal Growth Opportunities/Extracurricular STEM Activities -->
-    <section id="personal-growth" class="tab-section" role="tabpanel" hidden>
+    <section id="personal-growth" class="tab-section" role="tabpanel" aria-labelledby="personal-growth-tab" hidden>
       <h2>Personal Growth Opportunities/Extracurricular STEM Activities</h2>
     </section>
 
     <!-- 4. Volunteering in STEM Contexts -->
-    <section id="volunteering" class="tab-section" role="tabpanel" hidden>
+    <section id="volunteering" class="tab-section" role="tabpanel" aria-labelledby="volunteering-tab" hidden>
       <h2>Volunteering in STEM Contexts</h2>
     </section>
 
     <!-- 5. Outstanding Projects -->
-    <section id="projects" class="tab-section" role="tabpanel" hidden>
+    <section id="projects" class="tab-section" role="tabpanel" aria-labelledby="projects-tab" hidden>
       <h2>Outstanding Projects</h2>
     </section>
 
     <!-- 6. Job Shadowing/Internship -->
-    <section id="job-shadowing" class="tab-section" role="tabpanel" hidden>
+    <section id="job-shadowing" class="tab-section" role="tabpanel" aria-labelledby="job-shadowing-tab" hidden>
       <h2>Job Shadowing/Internship</h2>
     </section>
 
     <!-- 7. Employability Skills Evidence -->
-    <section id="employability-skills" class="tab-section" role="tabpanel" hidden>
+    <section id="employability-skills" class="tab-section" role="tabpanel" aria-labelledby="employability-skills-tab" hidden>
       <h2>Employability Skills Evidence</h2>
     </section>
 
     <!-- 8. Resume -->
-    <section id="resume" class="tab-section" role="tabpanel" hidden>
+    <section id="resume" class="tab-section" role="tabpanel" aria-labelledby="resume-tab" hidden>
       <h2>Resume</h2>
     </section>
 
   </main>
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <p>&copy; 2030 Anuj Yadav &bull; Northwest Cabarrus High School STEM Portfolio</p>
-  </footer>
+  <div class="page-scrollbar" aria-hidden="true" hidden>
+    <div class="page-scrollbar__thumb"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>

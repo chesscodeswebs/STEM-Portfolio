@@ -8,10 +8,10 @@
 
 const portfolioData = {
   // Your full name as you want it displayed on the site
-  fullName: "[YOUR FULL NAME]",
+  fullName: "Anuj Yadav",
 
   // Your high school graduation year
-  graduationYear: 2029,
+  graduationYear: 2030,
 
   // Path to your headshot image inside the images folder
   // When you add your photo, make sure it is named headshot.jpg
